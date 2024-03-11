@@ -136,9 +136,9 @@ def players_turn():
             print("player 1 points = ",A_points[0])
             print("player 2 points = ",B_points[0])
     if A_points[0] >= 5:
-        print("Player 1 won the game !!! ")
+        print("Player 1 won the game !!! \n")
     elif B_points[0]>=5:
-        print("Player 2 won the game !!! ")        
+        print("Player 2 won the game !!! \n")        
 
 board_init()
 players_turn()
