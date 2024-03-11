@@ -5,14 +5,6 @@
 # If the spot is same as the claimed spot of the other user, the user that rolled the dice gets a point. 
 # The player who gets 5 points first wins the game. 
 
-# create a board array of 6 rows and 6 columns 
-# two users will roll the dice twice per turn 
-# first roll is row and second roll is col
-# mark the spot of row and col in the board array for the rolled user
-# 
-# if the spot is already claimed by other user then 1 point will be added to rolled user
-# the player who gets 5 points first wins the game
-
 import random
 
 dice = [0,1,2,3,4,5]
