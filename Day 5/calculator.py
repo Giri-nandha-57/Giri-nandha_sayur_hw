@@ -1,23 +1,18 @@
-'''
-user input can be a string to perform mathimatcal operations 
-
-eg : 22+33/43-43-56+34*56
-'''
 import sys
 
-str = []
+string_in = []
 
-def add(add_num,num):
-    return add_num + num
+def add(num1,num2):
+    return num1 + num2
 
-def sub(sub_num,num):
-    return sub_num - num
+def sub(num1,num2):
+    return num1 - num2
 
-def mul(mul_num,num):
-    return mul_num * num
+def mul(num1,num2):
+    return num1 * num2
 
-def div(a,b):
-    return a/b
+def div(num1,num2):
+    return num1//num2
 
 def addition_oper(lst,i):
     index = i-1
@@ -51,29 +46,28 @@ def division_oper(lst,i):
     print("after division : ",lst)
     precedence(lst)
 
-def precedence(ip_str):
-    for i in range(len(ip_str)):
-        if ip_str[i] == '/':
-            ip_str = division_oper(ip_str,i)
-    for i in range(len(ip_str)):
-        if ip_str[i] == '*':
-            ip_str = multiplication_oper(ip_str,i)
-    for i in range(len(ip_str)):    
-        if ip_str[i] == '-':    
-            ip_str = subraction_oper(ip_str,i)
-    for i in range(len(ip_str)):    
-        if ip_str[i] == '+':
-            ip_str = addition_oper(ip_str,i)
-    if len(ip_str) == 1:
-        main(ip_str)
+def precedence(list_input):
+    for i in range(len(list_input)):
+        if list_input[i] == '/':
+            list_input = division_oper(list_input,i)
+    for i in range(len(list_input)):
+        if list_input[i] == '*':
+            list_input = multiplication_oper(list_input,i)
+    for i in range(len(list_input)):    
+        if list_input[i] == '-':    
+            list_input = subraction_oper(list_input,i)
+    for i in range(len(list_input)):    
+        if list_input[i] == '+':
+            list_input = addition_oper(list_input,i)
+    if len(list_input) == 1:
+        main(list_input)
 
 def user_input():
-    str = list(input("Enter your input numbers with mathematical expressions eg  xx ( '+' or '-' or '*' or '/' ) yy : \n").split(" "))
-    print(str)
-    precedence(str)
+    string_inp = list(input("Enter your input numbers with mathematical expressions eg  xx ( '+' or '-' or '*' or '/' ) yy : \n").split(" "))
+    precedence(string_inp)
 
 def main(output_list):
     print("Output of the given expression is : ",output_list[0]) 
     sys.exit(0)
-
+    
 user_input()
