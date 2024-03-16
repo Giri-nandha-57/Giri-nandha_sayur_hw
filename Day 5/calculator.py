@@ -71,3 +71,12 @@ def main(output_list):
     sys.exit(0)
     
 user_input()
+
+'''
+eg : 
+ 
+input = 22 / 34 * 34 / 24 + 20 - 39
+
+output = -19
+
+'''
