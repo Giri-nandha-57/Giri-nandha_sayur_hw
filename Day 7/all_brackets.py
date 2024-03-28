@@ -21,6 +21,6 @@ for i in user_inp:
                 stack.pop()
         copy = i
     if len(stack) == 0 and copy !="":# print i if it is valid input 
-        print(i)
+        print(i,"is a valid input ")
     else:
         print("not a valid input ")
