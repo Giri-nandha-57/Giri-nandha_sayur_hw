@@ -1,11 +1,12 @@
-inp = [4,5,6,5,3,2,1]
+inp = list(input("Enter the input : ").split(","))
 stack = [0]
 for i in inp:
+    integ = int(i)
     index = len(stack)-1
-    if stack[index]<i:
-        i += stack[index]
+    if stack[index]<integ:
+        integ += stack[index]
         stack.pop()
-        stack.append(i)
+        stack.append(integ)
     else:
-        stack.append(i)
+        stack.append(integ)
 print(stack)
