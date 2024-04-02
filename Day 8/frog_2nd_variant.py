@@ -12,16 +12,26 @@ add this constrain --> Imagine the frog becomes bigger as much as the size of th
 
 """
 
+
+def check(prev,integr):
+    integr += stack[prev]
+    stack.pop()
+    return integr
+
+
 inp = list(input("Enter the input : ").split(","))
 stack = []
 for i in inp:
+    flag = 0
     integ = int(i)
-    index = len(stack)
-    if index == 0:
-        stack.append(integ)
-    elif stack[index-1] < integ:
-        stack.pop()
-        stack.append(integ)
-    else:
-        stack.append(integ)
+    while flag == 0:
+        index = len(stack)
+        if index == 0:
+            stack.append(integ)
+            flag = 1
+        elif stack[index-1] < integ:
+            integ = check(index-1 , integ)
+        else:
+            stack.append(integ)
+            flag = 1
 print(stack)
