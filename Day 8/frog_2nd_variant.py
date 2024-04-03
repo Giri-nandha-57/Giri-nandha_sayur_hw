@@ -22,16 +22,15 @@ def check(prev,integr):
 inp = list(input("Enter the input : ").split(","))
 stack = []
 for i in inp:
-    flag = 0
     integ = int(i)
-    while flag == 0:
+    while 1:
         index = len(stack)
         if index == 0:
             stack.append(integ)
-            flag = 1
+            break
         elif stack[index-1] < integ:
             integ = check(index-1 , integ)
         else:
             stack.append(integ)
-            flag = 1
+            break
 print(stack)
