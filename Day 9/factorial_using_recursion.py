@@ -6,9 +6,9 @@ fact_num = 1
 
 def fact(num):
     global fact_num
-    if num<=0:
+    if num <= 0:
         return fact_num
-    return  num * fact(num-1)
+    return num * fact(num-1)
 
 
 user_inp = int(input("Enter the input to find factorial : "))
